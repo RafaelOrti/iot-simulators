@@ -1,0 +1,24 @@
+{
+  "name": "iot-simulators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gps-simulator": "node simulators/gps-simulator.js",
+    "plc": "node simulators/plc-simulator.js",
+    "sales-simulator": "node simulators/sales-simulator.js",
+    "start-all": "concurrently \"npm run gps-simulator\" \"npm run plc-simulator\" \"npm run sales-simulator\"",
+    "start": "node simulators/plc-simulator.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "mqtt": "^5.10.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}
