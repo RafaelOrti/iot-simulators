@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "gps-simulator": "node simulators/gps-simulator.js",
-    "plc": "node simulators/plc-simulator.js",
+    "plc-simulator": "node simulators/plc-simulator.js",
     "sales-simulator": "node simulators/sales-simulator.js",
     "start-all": "concurrently \"npm run gps-simulator\" \"npm run plc-simulator\" \"npm run sales-simulator\"",
-    "start": "node simulators/plc-simulator.js"
+    "start": "concurrently \"npm run gps-simulator\" \"npm run plc-simulator\""
   },
   "keywords": [],
   "author": "",
